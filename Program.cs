@@ -1,31 +1,52 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Day19RejexAssignment
 {
-    public class Pattern
+
+    class Program
     {
-        public static string Reg_pattern1 = "^[A-Z]{1}[A-Za-z]{2,}$";
-        public static string Reg_pattern2 = "^[A-Z]{1}[A-Za-z]{2,}$";
-        public static string Reg_pattern3 = "^(abc)(.[A-Za-z]+)*@(bl).(co)([.][a-z]{2,})?$";
-        public static bool validateName(string name)
+        public static void Main(string[] args)
         {
-            return Regex.IsMatch(name, Reg_pattern1);
+            Console.WriteLine("Please enter the First Name : ");
+            string name = Console.ReadLine();
+            bool val = Pattern.validateName(name);
 
-        }
-        public static bool validateLastName(string lastname)
-        {
-            return Regex.IsMatch(lastname, Reg_pattern2);
-        }
+            Console.WriteLine("Please enter the Last Name : ");
+            string lastname = Console.ReadLine();
+            bool val2 = Pattern.validateLastName(lastname);
 
-        public static bool validateEmailID(string email)
-        {
-            return Regex.IsMatch(email, Reg_pattern3);
-        }
+            Console.WriteLine("Please enter the Email  ID : ");
+            string email = Console.ReadLine();
+            bool val3 = Pattern.validateEmailID(email);
 
+            if (val)
+            {
+                Console.WriteLine("First Name is Valid.");
+            }
+            else
+            {
+                Console.WriteLine("First Name is not Valid.");
+
+            }
+
+            if (val2)
+            {
+                Console.WriteLine("Last Name is Valid.");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is not Valid.");
+
+            }
+
+            if (val3)
+            {
+                Console.WriteLine("Email ID is Valid.");
+            }
+            else
+            {
+                Console.WriteLine("Email ID is not Valid.");
+
+            }
+        }
     }
 }
