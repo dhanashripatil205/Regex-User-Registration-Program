@@ -6,16 +6,16 @@ namespace Day19RejexAssignment
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the First Name : ");
-            string name = Console.ReadLine();
-            bool val = Pattern.validatePincode(name);
+            Console.WriteLine("Please enter the Last Name : ");
+            string lastname = Console.ReadLine();
+            bool val = Pattern.validatePincode(lastname);
             if (val)
             {
-                Console.WriteLine("First Name is Valid.");
+                Console.WriteLine("Last Name is Valid.");
             }
             else
             {
-                Console.WriteLine("First Name is not Valid.");
+                Console.WriteLine("Last Name is not Valid.");
 
             }
         }
