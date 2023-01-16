@@ -10,9 +10,9 @@ namespace Day19RejexAssignment
     public class Pattern
     {
         public static string REGEX_PAT = "^[A-Z]{1}[a-zA-Z0-9]{2,20}$";
-        public static bool validatePincode(string name)
+        public static bool validatePincode(string lastname)
         {
-            return Regex.IsMatch(name, REGEX_PAT);
+            return Regex.IsMatch(lastname, REGEX_PAT);
         }
     }
 }
