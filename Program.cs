@@ -18,6 +18,10 @@ namespace Day19RejexAssignment
             string email = Console.ReadLine();
             bool val3 = Pattern.validateEmailID(email);
 
+            Console.WriteLine("Please enter the Mobile Number : ");
+            string Monumber = Console.ReadLine();
+            bool val4 = Pattern.validateMobileNumber(Monumber);
+
             if (val)
             {
                 Console.WriteLine("First Name is Valid.");
@@ -45,6 +49,16 @@ namespace Day19RejexAssignment
             else
             {
                 Console.WriteLine("Email ID is not Valid.");
+
+            }
+
+            if (val4)
+            {
+                Console.WriteLine("Mobile Number is Valid.");
+            }
+            else
+            {
+                Console.WriteLine("Mobile Number is not Valid.");
 
             }
         }
