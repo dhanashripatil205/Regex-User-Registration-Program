@@ -22,6 +22,10 @@ namespace Day19RejexAssignment
             string Monumber = Console.ReadLine();
             bool val4 = Pattern.validateMobileNumber(Monumber);
 
+            Console.WriteLine("Please enter the Password : ");
+            string password = Console.ReadLine();
+            bool val5 = Pattern.validatePassword(password);
+
             if (val)
             {
                 Console.WriteLine("First Name is Valid.");
@@ -59,6 +63,16 @@ namespace Day19RejexAssignment
             else
             {
                 Console.WriteLine("Mobile Number is not Valid.");
+
+            }
+
+            if (val5)
+            {
+                Console.WriteLine("Password is Correct.");
+            }
+            else
+            {
+                Console.WriteLine("Password is not Correct.");
 
             }
         }
