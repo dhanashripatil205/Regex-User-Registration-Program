@@ -14,6 +14,8 @@ namespace Day19RejexAssignment
         public static string Reg_pattern3 = "^(abc)(.[A-Za-z]+)*@(bl).(co)([.][a-z]{2,})?$";
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
         public static string Reg_pattern5 = "^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$";
+        public static string Reg_pattern6 = "^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$";
+
 
 
         public static bool validateName(string name)
@@ -39,6 +41,12 @@ namespace Day19RejexAssignment
         public static bool validatePassword(string password)
         {
             return Regex.IsMatch(password, Reg_pattern5);
+
+        }
+        
+        public static bool validatePassword1(string password)
+        {
+            return Regex.IsMatch(password, Reg_pattern6);
 
         }
 
